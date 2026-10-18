@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="home-container">
+        <nav class="navbar">
+            <a href="index.html" class="brand">🌤️ WeatherNow</a>
+            <span class="nav-label">Live Weather</span>
+        </nav>
+
+        <section class="hero">
+            <p class="eyebrow">YOUR DAILY WEATHER GUIDE</p>
+            <h1>Weather at your fingertips.</h1>
+
+            <p class="hero-text">
+                Discover the weather conditions in your city.
+                Get temperature, humidity, wind speed and air quality.
+            </p>
+
+            <div class="search-card">
+                <label for="inp-Ele">Enter your city</label>
+                <div class="search-row">
+                    <input type="text" id="inp-Ele" placeholder="e.g. Bengaluru, Mumbai" autocomplete="off">
+                    <button type="button" onclick="searchWeather()">Search →</button>
+                </div>
+                <div id="box" class="message-box"></div>
+            </div>
+
+            <div class="features">
+                <div class="feature"><span>🌡️</span><p>Temperature</p></div>
+                <div class="feature"><span>💧</span><p>Humidity</p></div>
+                <div class="feature"><span>💨</span><p>Wind speed</p></div>
+                <div class="feature"><span>🌿</span><p>Air quality</p></div>
+            </div>
+        </section>
+
+        <footer>WeatherNow · Your weather, made simple.</footer>
+    </main>
+</body>
+</html>

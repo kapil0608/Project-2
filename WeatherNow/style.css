@@ -1,0 +1,263 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #edf5ff, #e5eaff);
+    color: #1d2b45;
+}
+
+.home-container,
+.result-container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.brand {
+    color: #2463eb;
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav-label,
+.nav-link {
+    color: #53647e;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Home page */
+.hero {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 55px 0;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #2463eb;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1,
+.result-heading h1 {
+    margin: 15px 0;
+    color: #182747;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.hero-text,
+.result-heading > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #63718a;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Search card */
+.search-card {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e4eaf5;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(35, 64, 120, 0.09);
+    text-align: left;
+}
+
+.search-card label {
+    display: block;
+    margin-bottom: 12px;
+    color: #263753;
+    font-weight: 700;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #d5deed;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #2463eb;
+    box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.12);
+}
+
+button,
+.back-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    background: #2463eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover,
+.back-button:hover {
+    background: #1749b5;
+}
+
+/* Feature cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feature {
+    padding: 20px 10px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e3eaf7;
+    border-radius: 13px;
+}
+
+.feature span {
+    font-size: 27px;
+}
+
+.feature p {
+    margin: 10px 0 0;
+    color: #53647e;
+    font-size: 14px;
+}
+
+/* Results page */
+.result-heading {
+    margin: 55px 0 25px;
+    text-align: center;
+}
+
+.result-heading h1 {
+    font-size: clamp(30px, 4vw, 44px);
+}
+
+.result-section {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+#box {
+    width: 100%;
+    margin: 20px auto;
+    padding: 28px;
+    background: white;
+    border: 1px solid #e2eaf6;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(35, 64, 120, 0.09);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#box h2 {
+    margin: 0 0 22px;
+    color: #2463eb;
+    font-size: 25px;
+    text-align: center;
+}
+
+#box p {
+    margin: 0;
+    padding: 15px 5px;
+    color: #35445e;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px solid #edf0f6;
+}
+
+#box p:last-child {
+    border-bottom: none;
+}
+
+.back-button {
+    margin-top: 8px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding-top: 30px;
+    color: #71809a;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .home-container,
+    .result-container {
+        padding: 20px 16px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .search-card {
+        padding: 18px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #box {
+        padding: 20px;
+    }
+
+    .result-heading {
+        margin-top: 40px;
+    }
+}
